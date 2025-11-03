@@ -65,4 +65,5 @@
   (slot id)
   (slot cliente-id)
   (slot valor)
+  (slot motivo)
 )
