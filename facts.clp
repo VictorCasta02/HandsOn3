@@ -5,6 +5,7 @@
   (smartphone (id 4) (marca google) (modelo Pixel8) (color verde) (precio 20000) (almacenamiento 128GB) (ram 8GB) (stock 100))
   (smartphone (id 5) (marca huawei) (modelo P50) (color plateado) (precio 18000) (almacenamiento 256GB) (ram 8GB) (stock 100))
   (smartphone (id 6) (marca oneplus) (modelo 12) (color negro) (precio 23000) (almacenamiento 512GB) (ram 16GB) (stock 100))
+  
 )
 
 (deffacts computadores

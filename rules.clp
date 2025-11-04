@@ -54,12 +54,12 @@
     (printout t "Clasificación: " (implode$ ?name) " es Mayorista (cantidad " ?qty " de " ?modelo ")." crlf))
 )
 
-;; Rule 6: Update stock for smartphone orders
 (defrule actualizar-stock-smartphone
   ?item <- (line-item (orden-numero ?o) (product-type smartphone) (product-id ?pid) (cantidad ?qty))
   ?prod <- (smartphone (id ?pid) (modelo ?modelo) (stock ?stock&:(>= ?stock ?qty)))
   =>
   (modify ?prod (stock (- ?stock ?qty)))
+  (retract ?item)
   (printout t "Stock actualizado: " ?modelo " ahora tiene " (- ?stock ?qty) " unidades." crlf)
 )
 
